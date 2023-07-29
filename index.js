@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://admin:oSwcpWsGGVSrkA0m@cluster0.ggdgb4h.mongodb.net/random_collections`;
+const uri = `${process.env.DB_URI}`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
